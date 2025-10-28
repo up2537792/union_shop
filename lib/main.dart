@@ -66,7 +66,6 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: Row(
                         children: [
-                          // Use InkWell for better interaction feedback
                           GestureDetector(
                             onTap: () {
                               navigateToHome(context);
