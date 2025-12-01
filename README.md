@@ -1,3 +1,45 @@
+# Project Description (English translation of the Chinese section)
+
+This repository is a Flutter demo application (Union Shop) implemented for coursework. The goal is to reproduce most of the features of an online shop for demonstration and assessment, with emphasis on functionality and responsive layouts.
+
+## Implemented features (brief)
+
+- Static homepage (mobile-first)
+- Responsive navigation (mobile / desktop)
+- About page (static)
+- Footer with example links
+- Collections list and single collection page (data-driven)
+- Product detail pages (images, variants, add-to-cart)
+- Sale/Promotions page
+- Authentication UI (example sign-in / sign-up forms)
+- Shopping cart (add items, change quantity, persistence via SharedPreferences)
+- Search results page
+- Print Shack personalisation demo page
+
+## Run & Test (English)
+
+Install dependencies and run the app:
+
+```powershell
+flutter pub get
+flutter run    # or specify device: flutter run -d chrome / -d windows
+```
+
+Run tests:
+
+```powershell
+flutter test
+```
+
+## Continuous Integration (CI) (English)
+
+The repository includes a GitHub Actions workflow `.github/workflows/ci.yml` that runs on push/PR and performs `flutter pub get`, `flutter analyze`, and `flutter test` for automated checks.
+
+## Marking mapping (brief, English)
+
+- Application (30%): Most basic and intermediate features are implemented (estimated ~27/30).
+- Software development practices (25%): More tests, a clearer commit history and evidence of external service integration are needed (estimated ~7/25).
+
 # Union Shop — Flutter Coursework
 
 This repository contains the coursework project for students enrolled in the **Programming Applications and Programming Languages (M30235)** and **User Experience Design and Implementation (M32605)** modules at the University of Portsmouth.
@@ -61,114 +103,6 @@ Below is a quick guide for each option. For more information, you can refer to [
 - Run in PowerShell (as Administrator):
 
   ```bash
-  choco install git vscode flutter -y
-  ```
-
-**Personal macOS Computer:**
-
-- Install [Homebrew package manager](https://brew.sh/)
-- Run in Terminal:
-
-  ```bash
-  brew install --cask visual-studio-code flutter
-  ```
-
-After installation, verify your setup by running:
-
-```bash
-flutter doctor
-```
-
-This command checks your environment and displays a report of the status of your Flutter installation.
-
-For detailed step-by-step instructions, refer to [Worksheet 1 — Introduction to Flutter](https://manighahrmani.github.io/sandwich_shop/worksheet-1.html), which covers the complete setup process for all three options.
-
-### Fork the Repository
-
-Go to the repository containing the code for the coursework and click on the fork button as shown in the screenshot: [github.com/manighahrmani/union_shop/fork](https://github.com/manighahrmani/union_shop/fork) (Alternatively, just use this link: [github.com/manighahrmani/union_shop/fork](https://github.com/manighahrmani/union_shop/fork).)
-
-![Fork Button](https://raw.githubusercontent.com/manighahrmani/sandwich_shop/refs/heads/main/images/screenshot_fork_button.png)
-
-Do not change anything and click on the Create fork button. You should then have a public fork of my repository with a URL like (YOUR-USERNAME replaced with your username): [github.com/YOUR-USERNAME/union_shop](https://github.com/YOUR-USERNAME/union_shop)
-
-![Fork Settings](https://raw.githubusercontent.com/manighahrmani/sandwich_shop/refs/heads/main/images/screenshot_fork_settings.png)
-
-Note that the name of this created fork must be “union_shop”. If you already have a repository with this name, you need to rename it beforehand.
-
-### Clone Your Forked Repository
-
-If you are using Firebase, access idx.google.com with a personal Google account. Create a new Flutter Workspace named `union_shop` (choose the Flutter template in the “Start coding an app” section). Once the Flutter Workspace is created, open the integrated terminal (View → Terminal) and link this project to your forked GitHub repository by running the following commands (replace YOUR-USERNAME in the URL): 
-
-```bash
-rm -rf .git && git init && git remote add origin https://github.com/YOUR-USERNAME/union_shop.git && git fetch origin && git reset --hard origin/main 
-```
-
-This command should remove the existing Git history, initialize a new Git repository, add your forked repository as the remote named origin, fetch the data from it. It should also reset the local files to match the main branch of your forked repository. After running the above commands, open the Source Control view and commit any local changes.  
-
-Otherwise, open a terminal, change to your desired directory, and run the following commands:
-
-```bash
-git clone https://github.com/YOUR-USERNAME/union_shop.git
-cd union_shop
-```
-
-Replace `YOUR-USERNAME` with your actual GitHub username.
-
-### Install Dependencies
-
-Your editor should automatically prompt you to install the required dependencies when you open the project. If not, open the integrated terminal (open the Command Palette with `Ctrl+Shift+P` or `Cmd+Shift+P` and type "Terminal: Create New Terminal") and run the following command:
-
-```bash
-flutter pub get
-```
-
-### Run the Application
-
-This application is primarily designed to run on the **web** and should be viewed in **mobile view** using your browser's developer tools. We recommend using Google Chrome.
-
-Select Chrome as the target device and run the application either from the `main.dart` file or by entering the following command in the terminal:
-
-```bash
-flutter run -d chrome
-```
-
-Once the app is running in Chrome, open Chrome DevTools by right-clicking on the page and selecting "Inspect" (or use the shortcut `F12`). Click the "Toggle device toolbar" button as shown in the screenshot below.
-
-![Chrome DevTools Mobile View](https://raw.githubusercontent.com/manighahrmani/sandwich_shop/refs/heads/main/images/screenshot_chrome_devtools.png)
-
-From the Dimensions menu, select a mobile device preset (e.g., iPhone 12 Pro, Pixel 5):
-
-![Device Selection](https://raw.githubusercontent.com/manighahrmani/sandwich_shop/refs/heads/main/images/screenshot_chrome_devtools_device_selection.png)
-
-## Marking Criteria
-
-This assessment is worth 55% of the marks for the module's assessment item 1 (the remaining 45% comes from the weekly sign-offs). The mark for the assessment is divided into two components:
-
-- **[Application (functionality) (30%)](#application)**: Demonstrated through a live demo during practical
-- **[Software Development Practices (25%)](#software-development-practices)**: Assessed through your repository
-
-⚠️ You will only receive marks if you **both** attend a practical session for the demo **and** submit the link to your forked repository on Moodle before the deadline. Failure to do either will result in a mark of 0 for the entire coursework.
-
-For info on the overall assessment structure, visit the [Flutter Course homepage](https://manighahrmani.github.io/sandwich_shop/).
-
-### Application
-
-30% of the coursework mark comes from functionality demonstrated through a live demo during practical sessions. More information about the demo sessions is provided in the [demonstration section](#demonstration).
-
-Your objective is to reimplement as many features from the existing [Union Shop website](https://shop.upsu.net) as you can in your forked repository using Flutter.
-
-The table below is an almost comprehensive list of features present on the website, sorted by difficulty. Each feature has a corresponding percentage value indicating its weight in the 30% application mark and a reference link to the relevant page on the actual website.
-
-⚠️ Note that this assessment focuses on functionality over visual design (do not spend a lot of time making it look exactly like the real website). You do not have to list the exact same products or collections as the real website. You are also encouraged to use copyright-free or AI-generated images instead of downloading images from the real website.
-
-| Feature | Description | Marks (%) | Reference |
-|---------|-------------|-----------|-----------|
-| **Basic (40%)** | | | |
-| Static Homepage | Homepage layout and widgets with static content (hardcoded data* acceptable, mobile view focus) | 5% | [Homepage](https://shop.upsu.net/) |
-| Static Navbar | Top navigation bar with menu (links do not have to work at this stage, mobile view focus) | 5% | [Homepage](https://shop.upsu.net/) |
-| About Us Page | Static about us page* with company information (separate page from homepage) | 5% | [About Us](https://shop.upsu.net/pages/about-us) |
-| Footer | Footer with dummy* links and information present in at least one page | 4% | [Homepage](https://shop.upsu.net/) |
-| Dummy* Collections Page | Page displaying various collections of products (hardcoded data* acceptable) | 5% | [Collections](https://shop.upsu.net/collections/) |
 | Dummy* Collection Page | Page displaying products within one collection including dropdowns and filters (hardcoded data* acceptable, widgets do not have to function) | 5% | [Collection Example](https://shop.upsu.net/collections/autumn-favourites) |
 | Dummy* Product Page | Product page showing details and images with dropdowns, buttons and widgets (hardcoded data* acceptable, widgets do not have to function) | 4% | [Product Example](https://shop.upsu.net/collections/autumn-favourites/products/classic-sweatshirt-1) |
 | Sale Collection | Page showing sale products with discounted prices and promotional messaging (hardcoded data* acceptable, widgets do not have to function) | 4% | [Sale Items](https://shop.upsu.net/collections/sale-items) |
@@ -265,32 +199,101 @@ union_shop/
 
 Note that this is the initial structure. You are expected to create additional files and directories as needed to complete the coursework. You can also reorganize the project structure as you see fit.
 
-## Help with Coursework
+# Union Shop — Flutter Coursework
 
-### Support
+## Project description
 
-If you have questions or encounter issues while working on this coursework, use [the dedicated Discord channel](https://portdotacdotuk-my.sharepoint.com/:b:/g/personal/mani_ghahremani_port_ac_uk/EbX583gvURRAhqsnhYqmbSEBwIFw6tXRyz_Br1GxIyE8dg) to ask for help. Before posting a new question, check the existing posts to see if your question has already been answered. You can also attend your timetabled practical sessions to get face-to-face support from teaching staff.
+This repository contains a Flutter demo application (Union Shop) implemented for coursework. The goal is to recreate core e-commerce features for demonstration and assessment, focusing on functionality and responsive layout rather than exact visual parity.
 
-If you are facing external extenuating circumstances that are affecting your ability to complete this coursework, you should submit an [Extenuating Circumstances Form](https://myport.port.ac.uk/my-course/exams/extenuating-circumstances) as soon as possible. You are also welcome to contact me on Discord for additional support without needing to disclose the private details of your situation.
+## Implemented features (brief)
 
-### Resources
+- Static homepage (mobile-first)
+- Responsive navigation (mobile/desktop)
+- About page (static)
+- Footer with dummy links
+- Collections list and single collection page (data-driven)
+- Product detail pages (images, variants, add to cart)
+- Sale collection page
+- Authentication UI (example sign-in/sign-up forms)
+- Shopping cart (add, quantity edit, persistence via SharedPreferences)
+- Search results page
+- Print Shack personalise demo page
 
-The worksheets listed on [the homepage](https://manighahrmani.github.io/sandwich_shop/) are your primary learning resource for Flutter development. Work through these worksheets systematically as they provide the foundation you need to complete the coursework successfully. Refrain from using other online resources such as Stack Overflow, YouTube tutorials, or other websites for this coursework as they may contain outdated or incorrect information that could lead you astray.
+## Run & Test
 
-### Tips
+Install dependencies and run the app:
 
-Starting early is crucial for success in this coursework. The earlier you begin, the more time you have to learn, experiment, and seek help when needed. You should aim to work on the coursework alongside the worksheets rather than leaving everything until the end. As you complete each worksheet, implement the corresponding features in your coursework application. This approach allows you to apply what you learn immediately and build your application incrementally.
-
-When planning your implementation, prioritize features based on the difficulty levels outlined in the [marking criteria](#application). Start with the basic features to establish a solid foundation before moving on to intermediate and advanced functionality. This strategy ensures you secure marks early and have a working application even if you run out of time for the more complex features.
-
-Version control is an essential part of this coursework. Commit your changes regularly to Git with clear, descriptive commit messages. Each commit should represent a small, meaningful unit of work rather than large batches of changes. This practice creates checkpoints you can return to if something goes wrong and demonstrates your development process to assessors. To commit and push your changes, use the following commands:
-
-```bash
-git add .
-git commit -m "Brief description of what you changed"
-git push
+```powershell
+flutter pub get
+flutter run    # or specify device: flutter run -d chrome / -d windows
 ```
 
-If you make a mistake and need to revert to a previous commit, you can view your commit history with `git log --oneline`, find the commit hash where things were working (for example, `abc1234`), and revert to that commit with `git reset --hard abc1234`. If necessary, you can force push with `git push --force`. In extreme cases where your repository is completely broken and unrecoverable, you can start fresh by deleting your forked repository on GitHub (Settings → Danger Zone → Delete this repository), forking the original repository again from [github.com/manighahrmani/union_shop](https://github.com/manighahrmani/union_shop), and cloning your fresh fork.
+Run tests:
 
-AI tools are valuable during development, and you are encouraged to use them. However, you must apply the best practices taught in the worksheets, particularly those covered in [Worksheet 6](https://manighahrmani.github.io/sandwich_shop/worksheet-6.html). AI-generated code should be reviewed, understood, and adapted to fit your application properly. Blindly copying AI suggestions without understanding them will likely result in poor code quality and may not meet the requirements. Use AI as a learning aid and coding partner rather than a replacement for your own understanding and decision-making.
+```powershell
+flutter test
+```
+
+## Continuous Integration (CI)
+
+The repository includes a GitHub Actions workflow `.github/workflows/ci.yml` that runs on push/PR and performs `flutter pub get`, `flutter analyze`, and `flutter test` for automated checks.
+
+## External services & integration (brief)
+
+Current implementation is offline/demo-only and does not depend on cloud services. For full production-like features we recommend integrating:
+
+- Firebase Auth (user authentication)
+- Firebase Firestore (orders / user data persistence)
+
+If you want, I can generate example integration code and document how to add the required config files (do not commit credentials to a public repo).
+
+## Marking mapping (brief)
+
+- Application (30%): Most basic and intermediate features are implemented (estimated ~27/30).
+- Software development practices (25%): Needs more tests, clearer commit history and evidence of external service integration (estimated ~7/25).
+
+---
+
+## 项目描述（中文）
+
+本仓库为课程作业实现的 Flutter 演示应用（Union Shop），目标是复现在线商店的大部分功能用于演示与评估，侧重功能性与响应式布局。
+
+## 已实现功能（简要，中文）
+
+- 静态主页（移动优先）
+- 响应式导航栏（移动/桌面）
+- 关于页面（静态）
+- 页脚（虚拟链接）
+- Collections 列表与单一 Collection 页面（数据驱动）
+- 产品详情页（图片、变体、加入购物车）
+- 促销/特价页面
+- 认证界面（示例登录/注册表单）
+- 购物车（加入、数量编辑、通过 SharedPreferences 持久化）
+- 搜索结果页面
+- Print Shack 个性化示例页面
+
+## 运行与测试（中文）
+
+安装依赖并运行应用：
+
+```powershell
+flutter pub get
+flutter run    # 或指定设备： flutter run -d chrome / -d windows
+```
+
+运行测试：
+
+```powershell
+flutter test
+```
+
+## 持续集成（CI）（中文）
+
+仓库包含 GitHub Actions 工作流 `.github/workflows/ci.yml`，在 push/PR 时运行 `flutter pub get`、`flutter analyze` 与 `flutter test`，用于自动化检查与测试。
+
+
+## 评分映射（简要，中文）
+
+- 应用功能（30%）：已实现大部分基础与中级功能（估算约 27/30）。
+- 软件开发实践（25%）：仍需补充更多测试、清晰提交历史与外部服务证据（估算约 7/25）。
+
