@@ -78,7 +78,9 @@ class SaleCollectionPage extends StatelessWidget {
                 // account for spacing between columns
                 final spacing = 12.0 * (columns - 1);
                 final itemWidth = (maxW - spacing) / columns;
-                const itemHeight = 180.0;
+                // Increase itemHeight to ensure card content (image + padding + text)
+                // fits within the grid cell and avoids bottom overflow on some screens.
+                const itemHeight = 220.0;
                 final aspect = (itemWidth / itemHeight).clamp(1.0, 4.0);
 
                 return GridView.count(
